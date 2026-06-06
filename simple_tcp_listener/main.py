@@ -17,20 +17,49 @@ Modules:
     - python-nmap
 """
 
+
+#
+# Imports
+#
 import socket
 
+
+#
+# Globals
+#
+TCP_IP = "127.0.0.1"
+TCP_PORT = 6996
+BUFFER_SIZE = 100
+
+
+#
+# Functions
+#
 def main():
     """
     Entry point of the program.
     """
-    s = socket.socket()
-    s.connect(("127.0.0.1", 22))
+    # create socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((TCP_IP, TCP_PORT))
+    s.listen(1)
 
-    answer = s.recv(1024)
-    print(answer)
+    # connect
+    conn, addr = s.accept()
+    print("[*] Connection address: ", addr)
 
-    s.close()
+    # print out info from connection
+    while True:
+        data = conn.recv(BUFFER_SIZE)
 
+        if not data:
+            break
+
+        print("[*] Received data: ", data)
+        conn.send(data)
+
+    # close connection
+    conn.close()
 
 # This condition checks if the script is being run directly
 # (as opposed to being imported as a module in another script).
