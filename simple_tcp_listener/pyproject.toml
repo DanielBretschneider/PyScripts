@@ -1,0 +1,10 @@
+[project]
+name = "simple-tcp-listener"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pysnmp>=7.1.27",
+    "python-nmap>=0.7.1",
+]
