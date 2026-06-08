@@ -1,8 +1,3 @@
-Great topic choice—CS50 Python projects + cybersecurity/forensics/OSINT is a *perfect* combination. The key for CS50 is: your project should demonstrate real problem-solving, clean Python structure, and something interactive (CLI or small UI).
-
-Here are **strong, realistic, and CS50-friendly project ideas**, grouped by domain, with clear scope so you don’t accidentally pick something too complex.
-
-***
 
 # 🔐 Cybersecurity Project Ideas
 
@@ -230,13 +225,3 @@ Here’s something slightly more original:
 * Example:
   * Same IP, multiple login attempts
   * Logins at unusual times
-
-***
-
-If you want, I can:
-
-* Help you **pick one based on your skill level**
-* Design a **complete project plan (files, functions, code structure)**
-* Or even give you a **starter template in Python**
-
-👉 Which idea do you like most?
